@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <bean id="student" class="com.riant.bean.Student">
+        <property name="name" value="小明"/>
+        <property name="address" ref="address"/>
+        <property name="books" >
+          <array>
+              <value>高数</value>
+              <value>英语</value>
+              <value>计算机技术</value>
+          </array>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>游泳</value>
+                <value>跑步</value>
+                <value>健身</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="中信信用卡" value="6226888880000"/>
+                <entry key="中信储蓄卡" value="6226888880001"/>
+                <entry key="学生卡" value="20141314"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>王者荣耀</value>
+                <value>和平精英</value>
+            </set>
+        </property>
+        <property name="wife" >
+            <null/>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="父亲">李明</prop>
+                <prop key="母亲">韩梅梅</prop>
+                <prop key="妹妹">小爱</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="address" class="com.riant.bean.Address">
+        <property name="address" value="shenzhen"/>
+    </bean>
+
+
+</beans>
+
+
