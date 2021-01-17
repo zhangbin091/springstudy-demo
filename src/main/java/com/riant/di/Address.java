@@ -1,4 +1,4 @@
-package com.riant.bean;
+package com.riant.di;
 
 /**
  * @Classname Address

@@ -1,4 +1,4 @@
-package com.riant.bean;
+package com.riant.di;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

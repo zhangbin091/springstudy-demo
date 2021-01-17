@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
 
-    <bean id="student" class="com.riant.bean.Student">
+    <bean id="student" class="com.riant.di.Student">
         <property name="name" value="小明"/>
         <property name="address" ref="address"/>
         <property name="books" >
@@ -52,7 +52,7 @@
         </property>
     </bean>
 
-    <bean id="address" class="com.riant.bean.Address">
+    <bean id="address" class="com.riant.di.Address">
         <property name="address" value="shenzhen"/>
     </bean>
 
