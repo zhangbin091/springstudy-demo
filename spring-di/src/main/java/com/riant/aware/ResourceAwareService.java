@@ -19,6 +19,7 @@ public class ResourceAwareService implements ResourceLoaderAware, BeanNameAware,
     private ResourceLoader resourceLoader;
     private BeanFactory beanFactory;
     public void setBeanName(String beanName) {
+        System.out.println("初始化 ResourceAwareService");
         this.beanName =beanName;
     }
 
@@ -28,6 +29,7 @@ public class ResourceAwareService implements ResourceLoaderAware, BeanNameAware,
     }
 
     public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        System.out.println("获取beanFactory");
         this.beanFactory = beanFactory;
     }
 
@@ -44,6 +46,10 @@ public class ResourceAwareService implements ResourceLoaderAware, BeanNameAware,
     }
 
     public void destroy() throws Exception {
+        System.out.println("销毁ResourceAwareService");
+    }
 
+    public Object getBean(String name){
+        return beanFactory.getBean(name);
     }
 }
